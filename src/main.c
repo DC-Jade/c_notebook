@@ -81,6 +81,16 @@ void TestPointer() {
 	printf("int size: %d byte\n", sizeof(int));
 }
 
+void TestCharInt() {
+	int i = '1' - '0';
+	printf("%d\n", i);
+}
+
+void TestArray() {
+	char *ca[ARRAYLEN] = {"string", "hello", "world"};
+	printf("%s %s %s\n", ca[0], ca[1], ca[2], ca[3]);
+}
+
 int main() {
 	//int i = 1;
 	//WordCount();
@@ -93,5 +103,7 @@ int main() {
 	//TestStatic();
 	//TestStatic();
 	//TestVoidPointer();
-	TestPointer();
+	//TestPointer();
+	//TestCharInt();
+	TestArray();
 }
