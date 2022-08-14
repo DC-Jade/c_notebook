@@ -6,7 +6,7 @@
 - Ref:\
 [Linux C编程一站式学习](https://linux-c-learning-all-in-one.readthedocs.io/zh_CN/latest/index.html)\
 [C语言程序设计](https://book.douban.com/subject/1139336/)
-[The C Programming Language]()
+[The C Programming Language](http://cslabcms.nju.edu.cn/problem_solving/images/c/cc/The_C_Programming_Language_%282nd_Edition_Ritchie_Kernighan%29.pdf)
 
 ## Supported
 
