@@ -41,7 +41,8 @@ void testStrcpy() {
 	free(old);
 }
 
-int strcmp(char *s, char *t) {
+int strcmp_v1(char *s, char *t) {
+	/* my first version */
 	while (*s != '\0' || *t != '\0') {
 		if (*s < *t) return -1;
 		else if (*s > *t) return 1;
@@ -54,11 +55,27 @@ int strcmp(char *s, char *t) {
 	else return 1;
 }
 
+int strcmp_v2(char *s, char *t) {
+	for ( ; *s == *t; s++, t++) {
+		if (*s == '\0')
+			return 0; 
+	}
+	return *s - *t;
+}
+
 void testStrcmp() {
-	int res = strcmp("hello", "world");
-	res = strcmp("aab", "aaa");
-	res = strcmp("aaa", "aab");
-	res = strcmp("aaa", "aaa");
+	int res;
+	res = strcmp_v1("aab", "aaa");
+	printf("res = %d\n", res);
+	res = strcmp_v1("aaa", "aab");
+	printf("res = %d\n", res);
+	res = strcmp_v1("aaa", "aaa");
+	printf("res = %d\n", res);
+	res = strcmp_v2("aab", "aaa");
+	printf("res = %d\n", res);
+	res = strcmp_v2("aaa", "aab");
+	printf("res = %d\n", res);
+	res = strcmp_v2("aaa", "aaa");
 	printf("res = %d\n", res);
 }
 

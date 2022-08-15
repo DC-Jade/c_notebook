@@ -36,8 +36,23 @@ void testStrlen() {
 	printf("len = %d\n", res);
 }
 
+/* char *month[] = { "illegal month", "Jan", "Feb", "Mar" }; */
+
+void testMonth() {
+	/* char *month[] = { "illegal month", "Jan", "Feb", "Mar" }; */
+	/* for (int i = 0; i < sizeof(month) / sizeof(month[0]); ++i) { */
+	/*   printf("%s\n", month[i]); */
+	/* } */
+	char *month = "illegal month";
+	printf("address of month: %p\n", &month);
+	printf("address of month pointing to: %p\n", month);
+	printf("month[0]: %c\n", month[0]);
+	printf("%s\n", month);
+	printf("month: %c\n", *month);
+}
 int main() {
 	/* testTypecast(); */
 	/* testStatic(); */
-	testStrlen();
+	/* testStrlen(); */
+	testMonth();
 }
